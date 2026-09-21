@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Abobakr Rajab Bakry — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* Wozber page size: 675 x 954.75 pts ≈ 238.1mm x 336.9mm */
+    @page {
+      size: 675pt 954.75pt;
+      margin: 32pt 40pt 34pt 40pt;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Roboto", Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      line-height: 1.36;
+      color: #1a1a1a;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ---- Header ---- */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24pt;
+      margin-bottom: 16pt;
+    }
+
+    .name {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 24pt;
+      letter-spacing: -0.3px;
+      line-height: 1.12;
+      color: #111;
+    }
+
+    .headline {
+      font-family: "Roboto", Arial, sans-serif;
+      font-weight: 400;
+      font-size: 11pt;
+      color: #333;
+      margin-top: 5pt;
+    }
+
+    .contact {
+      flex-shrink: 0;
+      text-align: left;
+      font-size: 9.5pt;
+      line-height: 1.5;
+      color: #222;
+      padding-top: 2pt;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 7pt;
+      margin-bottom: 2.5pt;
+      white-space: nowrap;
+    }
+
+    .contact-row svg {
+      width: 11.5pt;
+      height: 11.5pt;
+      flex-shrink: 0;
+      fill: #222;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      margin-bottom: 12pt;
+    }
+
+    .section-title {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11pt;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #111;
+      padding-bottom: 4pt;
+      margin-bottom: 8pt;
+      border-bottom: 1.5pt dotted #9a9a9a;
+    }
+
+    .summary {
+      font-size: 10pt;
+      line-height: 1.42;
+      color: #222;
+      text-align: left;
+    }
+
+    /* ---- Jobs ---- */
+    .job {
+      margin-bottom: 10pt;
+    }
+
+    .job-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12pt;
+    }
+
+    .job-title {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11pt;
+      color: #111;
+    }
+
+    .job-dates {
+      font-size: 10pt;
+      color: #444;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .company {
+      display: inline-flex;
+      align-items: center;
+      gap: 4pt;
+      font-size: 10pt;
+      color: #6b6b6b;
+      margin: 1pt 0 3pt;
+    }
+
+    .company .ext {
+      width: 8.5pt;
+      height: 8.5pt;
+      fill: #8a8a8a;
+    }
+
+    .job ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .job li {
+      position: relative;
+      padding-left: 11pt;
+      margin-bottom: 2pt;
+      font-size: 10pt;
+      line-height: 1.36;
+      color: #222;
+    }
+
+    .job li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .job li .label {
+      font-weight: 500;
+    }
+
+    /* ---- Skills / Languages grids ---- */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 28pt;
+      row-gap: 5pt;
+    }
+
+    .skill-row,
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10pt;
+      font-size: 10pt;
+    }
+
+    .skill-name,
+    .lang-name {
+      color: #222;
+      line-height: 1.3;
+    }
+
+    .skill-level,
+    .lang-level {
+      color: #8a8a8a;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-size: 9.5pt;
+    }
+
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== PAGE 1 ========== -->
+  <div class="header">
+    <div>
+      <div class="name">Abobakr Rajab Bakry</div>
+      <div class="headline">Full-Stack Developer | Senior Backend Engineer</div>
+    </div>
+    <div class="contact">
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/></svg>
+        <span>01008078704</span>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:abobakr.r.bakry@gmail.com">abobakr.r.bakry@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18.3H5.7V9.7h2.6v8.6zM7 8.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18.3 18.3h-2.6v-4.2c0-1-.4-1.7-1.3-1.7-.7 0-1.1.5-1.3.9-.1.2-.1.5-.1.8v4.2h-2.6s.0-6.8 0-7.5h2.6v1.1c.3-.5 1-1.3 2.4-1.3 1.8 0 3.1 1.2 3.1 3.7v4z"/></svg>
+        <a href="https://www.linkedin.com/in/abobakr-rajab/">linkedin.com/in/abobakr-rajab</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+        <span>Giza, Egypt</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Summary</div>
+    <p class="summary">
+      Accomplished Full-Stack Developer and Senior Backend Engineer with over five years of experience creating and
+      launching scalable web applications and serverless platforms. Skilled in TypeScript, Express.js, Nest.js, AWS Lambda,
+      Terraform, and DevOps methodologies, with a track record of building energy-management microservices, leading trading
+      platform development, and streamlining CI/CD pipelines on AWS. Possesses strong problem-solving abilities, emphasizing
+      performance optimization and operational effectiveness.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">Senior Software Engineer</div>
+        <div class="job-dates">04/2025 - Present</div>
+      </div>
+      <div class="company">
+        Software Techies
+        <svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
+      </div>
+      <ul>
+        <li>
+          <span class="label">Energy Platform:</span>
+          Built and maintain a serverless microservices system of ~18 AWS Lambda services to control and monitor
+          solar / home energy installations for EVA (https://www.evaportal.be/) across Belgium and France.
+        </li>
+        <li>
+          <span class="label">Automation:</span>
+          Implemented device control, real-time monitoring of generation, storage, and consumption, and automated
+          energy-flow optimization aligned with dynamic tariffs and self-consumption.
+        </li>
+        <li>
+          <span class="label">Infrastructure:</span>
+          Managed AWS infrastructure as code with Terraform (Lambda, IAM, networking, environments, monitoring)
+          for consistent, production-ready deployments.
+        </li>
+        <li>
+          <span class="label">AI Tooling:</span>
+          Developed an AI chatbot to analyze operational logs, speeding up incident diagnosis and reducing manual
+          log investigation.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">Senior Backend Engineer</div>
+        <div class="job-dates">07/2024 - 04/2025</div>
+      </div>
+      <div class="company">
+        ByDotPy
+        <svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
+      </div>
+      <ul>
+        <li>
+          <span class="label">Leadership:</span>
+          Led a team of developers to design and deploy the Sabika Trading Platform (Mobile Application, WebSite) for Gold.
+        </li>
+        <li>
+          <span class="label">Backend Development:</span>
+          Built scalable backend services using Express.js and TypeScript, ensuring high availability and optimal performance.
+        </li>
+        <li>
+          <span class="label">AWS Deployment:</span>
+          Deployed backend services and frontend assets on AWS, utilizing Elastic Load Balancers, CloudFront, and RDS for a robust architecture.
+        </li>
+        <li>
+          <span class="label">DevOps Implementation:</span>
+          Automated CI/CD pipelines with GitHub Actions and managed DNS and subdomains for production environments.
+        </li>
+        <li>
+          <span class="label">Monitoring and Security:</span>
+          Configured centralized logging and monitoring systems for error tracking and operational insights.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">Full-Stack Developer</div>
+        <div class="job-dates">08/2022 - Present</div>
+      </div>
+      <div class="company">
+        Freelance
+        <svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
+      </div>
+      <ul>
+        <li>
+          Designed and shipped Rodod, a unified customer conversation platform (https://tryrodod.com/).
+        </li>
+        <li>
+          Design and Developed an ERP system to calculate invoices and integration with (Egyptian invoicing &amp; e-receipt)
+          https://sdk.invoicing.eta.gov.eg/
+        </li>
+        <li>
+          Design and develop a frontend dashboard (Angular 16) develop and deploy server on aws
+          (https://envoice-1949f.web.app)
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">Senior Full-Stack Developer</div>
+        <div class="job-dates">01/2024 - 04/2024</div>
+      </div>
+      <div class="company">
+        Qannas
+        <svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
+      </div>
+      <ul>
+        <li>
+          Spearheaded the development and implementation of the Qannas system dashboard utilizing a robust full-stack approach
+          with NestJS, AdonisJS, and Angular. Focused on creating a highly responsive and interactive user interface, ensuring
+          seamless integration and functionality that enhanced operational efficiency and user experience.
+        </li>
+        <li>
+          Led the backend development of the Qannas Community, a dynamic social networking platform modeled after Twitter.
+          Architectured and building scalable, high-performance API services using NestJS, which supported real-time data
+          processing and interactions, significantly boosting user engagement and community growth.
+        </li>
+        <li>
+          Collaborated closely with cross-functional teams to align the dashboard and community platform with business
+          requirements, facilitating continuous feedback and iterative improvements that drove project success.
+        </li>
+        <li>
+          Employed best practices in code quality, security, and scalability, contributing to a 30% increase in system performance and
+          reliability through meticulous optimization and refactoring efforts.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">Backend Developer</div>
+        <div class="job-dates">07/2023 - 06/2024</div>
+      </div>
+      <div class="company">
+        Shopx
+        <svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
+      </div>
+      <ul>
+        <li>
+          Played a pivotal role in enhancing and refactoring the Lohanza e-commerce platform, successfully launched in 2023, using
+          NestJS, PostgreSQL, and Prisma ORM, leading to a more robust and scalable architecture (https://lohanza.com).
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========== PAGE 2 ========== -->
+  <div class="page-break"></div>
+
+  <div class="section">
+    <div class="job" style="margin-top: 0;">
+      <ul>
+        <li>
+          Spearheaded the development of a new professional version of Lohanza and launched an additional platform,
+          SouqAlMoslimeen.com. Focused on building these platforms to support enhanced user experiences and expanded
+          business capabilities (https://souqalmuslimeen.com).
+        </li>
+        <li>
+          Orchestrated the deployment of both e-commerce platforms on AWS, ensuring high availability and optimal performance,
+          significantly increasing market delivery's reliability and speed.
+        </li>
+        <li>
+          Integrated multiple payment gateways, including Stripe and Paymob, into the platforms, facilitating secure and versatile
+          payment options that enhanced customer satisfaction and operational efficiency.
+        </li>
+        <li>
+          Developed a comprehensive API to support the Shopx platform, encompassing customer management, shipment lifecycle,
+          and traveler services, which streamlined operations and improved service delivery to stakeholders.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">backend developer</div>
+        <div class="job-dates">07/2022 - 06/2023</div>
+      </div>
+      <div class="company">
+        Shelter Investment Group
+        <svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
+      </div>
+      <ul>
+        <li>Planned, developed, and deployed several apps.</li>
+        <li>Licensing Essentials System (Integration system ) For inquiries and to pay the traffic violation bill.</li>
+        <li>Plateforme -Microservice Nestjs - to process and review traffic violations.</li>
+        <li>Winch driving system -Nest js- (https://www.amangroup-eg.com)</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">Backend Developer</div>
+        <div class="job-dates">01/2022 - 06/2022</div>
+      </div>
+      <div class="company">
+        Smart Digital Service
+        <svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
+      </div>
+      <ul>
+        <li>
+          Worked on an E-Payment system, which processes thousands of transactions every day with high
+          availability and low latency.
+        </li>
+        <li>Enhancing current services.</li>
+        <li>Developing new apps helping E-Payment apps.</li>
+        <li>Developing microservices to help e-payment app</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">Computer Science</div>
+        <div class="job-dates">09/2015 - 01/2020</div>
+      </div>
+      <div class="company" style="margin-bottom: 0;">Helwan University - Bachelor of Computer Science</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <div class="two-col">
+      <div class="skill-row">
+        <span class="skill-name">Docker, GitHub Actions,<br />Nginx</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">PostgreSQL,Mysql,MongoDb</span>
+        <span class="skill-level">Intermediate</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">JavaScript/TypeScript,Nodejs</span>
+        <span class="skill-level">Expert</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">TypeORM,Prisma</span>
+        <span class="skill-level">Expert</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">Express.js ,Adonis.js and<br />Nest.js</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">AWS (EC2, S3, RDS,<br />CloudFront, Lambda)</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">Redis</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Terraform, Serverless</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">Problem Solving</span>
+        <span class="skill-level">Expert</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Linux</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Languages</div>
+    <div class="two-col">
+      <div class="lang-row">
+        <span class="lang-name">English</span>
+        <span class="lang-level">Intermediate</span>
+      </div>
+      <div class="lang-row">
+        <span class="lang-name">Arabic</span>
+        <span class="lang-level">Native</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
