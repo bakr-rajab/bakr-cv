@@ -7,10 +7,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    /* Wozber page size: 675 x 954.75 pts ≈ 238.1mm x 336.9mm */
+    /* Wozber page size: 675 x 954.75 pts */
     @page {
       size: 675pt 954.75pt;
-      margin: 32pt 40pt 34pt 40pt;
+      margin: 34pt 40pt 32pt 40pt;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -18,7 +18,7 @@
     body {
       font-family: "Roboto", Arial, Helvetica, sans-serif;
       font-size: 10pt;
-      line-height: 1.36;
+      line-height: 1.35;
       color: #1a1a1a;
       background: #fff;
       -webkit-print-color-adjust: exact;
@@ -33,15 +33,15 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: 24pt;
-      margin-bottom: 16pt;
+      margin-bottom: 14pt;
     }
 
     .name {
       font-family: "Montserrat", Arial, sans-serif;
       font-weight: 700;
-      font-size: 24pt;
+      font-size: 23pt;
       letter-spacing: -0.3px;
-      line-height: 1.12;
+      line-height: 1.1;
       color: #111;
     }
 
@@ -59,7 +59,7 @@
       font-size: 9.5pt;
       line-height: 1.5;
       color: #222;
-      padding-top: 2pt;
+      padding-top: 1pt;
     }
 
     .contact-row {
@@ -70,33 +70,45 @@
       white-space: nowrap;
     }
 
+    .contact-row:last-child { margin-bottom: 0; }
+
     .contact-row svg {
-      width: 11.5pt;
-      height: 11.5pt;
+      width: 11pt;
+      height: 11pt;
       flex-shrink: 0;
       fill: #222;
     }
 
     /* ---- Sections ---- */
     .section {
-      margin-bottom: 12pt;
+      margin-bottom: 13pt;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section.education {
+      page-break-before: always;
+      break-before: page;
+      padding-top: 0;
     }
 
     .section-title {
       font-family: "Montserrat", Arial, sans-serif;
       font-weight: 700;
-      font-size: 11pt;
+      font-size: 10.5pt;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: #111;
       padding-bottom: 4pt;
-      margin-bottom: 8pt;
+      margin-bottom: 9pt;
       border-bottom: 1.5pt dotted #9a9a9a;
     }
 
     .summary {
       font-size: 10pt;
-      line-height: 1.42;
+      line-height: 1.4;
       color: #222;
       text-align: left;
     }
@@ -106,23 +118,28 @@
       margin-bottom: 10pt;
     }
 
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
     .job-top {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 12pt;
+      margin-bottom: 1pt;
     }
 
     .job-title {
       font-family: "Montserrat", Arial, sans-serif;
       font-weight: 700;
-      font-size: 11pt;
+      font-size: 10.5pt;
       color: #111;
     }
 
     .job-dates {
-      font-size: 10pt;
-      color: #444;
+      font-size: 9.5pt;
+      color: #555;
       white-space: nowrap;
       flex-shrink: 0;
     }
@@ -131,14 +148,14 @@
       display: inline-flex;
       align-items: center;
       gap: 4pt;
-      font-size: 10pt;
+      font-size: 9.5pt;
       color: #6b6b6b;
-      margin: 1pt 0 3pt;
+      margin: 0 0 3pt;
     }
 
     .company .ext {
-      width: 8.5pt;
-      height: 8.5pt;
+      width: 8pt;
+      height: 8pt;
       fill: #8a8a8a;
     }
 
@@ -151,10 +168,14 @@
     .job li {
       position: relative;
       padding-left: 11pt;
-      margin-bottom: 2pt;
+      margin-bottom: 2.5pt;
       font-size: 10pt;
-      line-height: 1.36;
+      line-height: 1.35;
       color: #222;
+    }
+
+    .job li:last-child {
+      margin-bottom: 0;
     }
 
     .job li::before {
@@ -174,8 +195,8 @@
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 28pt;
-      row-gap: 5pt;
+      column-gap: 40pt;
+      row-gap: 5.5pt;
     }
 
     .skill-row,
@@ -183,7 +204,7 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 10pt;
+      gap: 12pt;
       font-size: 10pt;
     }
 
@@ -199,11 +220,6 @@
       white-space: nowrap;
       flex-shrink: 0;
       font-size: 9.5pt;
-    }
-
-    .page-break {
-      page-break-before: always;
-      break-before: page;
     }
   </style>
 </head>
@@ -238,15 +254,14 @@
   <div class="section">
     <div class="section-title">Summary</div>
     <p class="summary">
-      Accomplished Full-Stack Developer and Senior Backend Engineer with over five years of experience creating and
-      launching scalable web applications and serverless platforms. Skilled in TypeScript, Express.js, Nest.js, AWS Lambda,
-      Terraform, and DevOps methodologies, with a track record of building energy-management microservices, leading trading
-      platform development, and streamlining CI/CD pipelines on AWS. Possesses strong problem-solving abilities, emphasizing
-      performance optimization and operational effectiveness.
+      Senior Backend Engineer specializing in AWS serverless and Node.js platforms. Currently powering EVA energy
+      systems across Belgium and France with 18 Lambda microservices, Terraform infrastructure, and AI-assisted
+      operations. 5+ years shipping high-availability APIs, trading and SaaS products, and CI/CD pipelines that keep
+      production reliable and fast.
     </p>
   </div>
 
-  <div class="section">
+  <div class="section experience">
     <div class="section-title">Experience</div>
 
     <div class="job">
@@ -261,24 +276,21 @@
       <ul>
         <li>
           <span class="label">Energy Platform:</span>
-          Designed and operate a production serverless platform of 18 AWS Lambda microservices controlling and
-          monitoring solar / home-energy installations for EVA (https://www.evaportal.be/) across 2 markets
-          (Belgium and France).
+          Architect and run 18 AWS Lambda microservices controlling solar and home-energy systems for EVA
+          (https://www.evaportal.be/) across Belgium and France.
         </li>
         <li>
           <span class="label">Automation:</span>
-          Automated device control plus real-time monitoring of generation, storage, and consumption, optimizing
-          energy flows against dynamic tariffs to raise self-consumption and cut grid usage during peak-price periods.
+          Drive real-time device control and energy-flow optimization against dynamic tariffs to boost
+          self-consumption and cut peak-price grid usage.
         </li>
         <li>
           <span class="label">Infrastructure:</span>
-          Codified multi-environment AWS infrastructure with Terraform (Lambda, IAM, networking, monitoring),
-          standardizing deployments and reducing manual provisioning errors across services.
+          Codify multi-environment AWS with Terraform, standardizing releases and reducing provisioning errors.
         </li>
         <li>
           <span class="label">AI Tooling:</span>
-          Built an AI log-analysis chatbot that surfaces incident signals from operational logs, cutting time spent
-          on manual log review during production troubleshooting.
+          Engineer an AI log-analysis chatbot that surfaces incident signals and speeds outage diagnosis.
         </li>
       </ul>
     </div>
@@ -295,25 +307,23 @@
       <ul>
         <li>
           <span class="label">Leadership:</span>
-          Led a development team to design and ship the Sabika Gold Trading Platform end to end (mobile + web).
+          Led engineers to design and launch the Sabika Gold Trading Platform (mobile and web).
         </li>
         <li>
           <span class="label">Backend Development:</span>
-          Built high-availability Express.js / TypeScript APIs powering trading workflows with performance-focused
-          service design.
+          Built high-availability Express.js and TypeScript APIs for trading workflows.
         </li>
         <li>
           <span class="label">AWS Deployment:</span>
-          Deployed production stack on AWS with ELB, CloudFront, and RDS to support reliable, globally cached delivery.
+          Deployed production on AWS with ELB, CloudFront, and RDS for reliable global delivery.
         </li>
         <li>
-          <span class="label">DevOps Implementation:</span>
-          Automated release pipelines with GitHub Actions (build → test → deploy) and managed DNS/subdomains for
-          production environments, reducing manual release steps.
+          <span class="label">DevOps:</span>
+          Automated CI/CD with GitHub Actions and managed DNS, cutting manual release steps.
         </li>
         <li>
-          <span class="label">Monitoring and Security:</span>
-          Centralized logging and monitoring for faster error detection and operational visibility in production.
+          <span class="label">Monitoring:</span>
+          Implemented centralized logging and alerting for faster incident detection.
         </li>
       </ul>
     </div>
@@ -329,15 +339,15 @@
       </div>
       <ul>
         <li>
-          Designed and launched Rodod, a unified customer-conversation SaaS product covering intake-to-reply workflows
-          in one platform (https://tryrodod.com/).
+          Launched Rodod, a unified customer-conversation SaaS for intake-to-reply workflows
+          (https://tryrodod.com/).
         </li>
         <li>
-          Built an ERP invoicing system integrated with Egyptian Tax Authority e-invoicing &amp; e-receipt APIs
-          (https://sdk.invoicing.eta.gov.eg/), enabling compliant digital invoice submission.
+          Delivered an ERP invoicing system integrated with Egyptian Tax Authority e-invoicing APIs
+          (https://sdk.invoicing.eta.gov.eg/).
         </li>
         <li>
-          Delivered an Angular 16 operations dashboard and AWS-hosted backend for live invoicing use
+          Built an Angular 16 dashboard and AWS backend for live invoicing
           (https://envoice-1949f.web.app).
         </li>
       </ul>
@@ -354,16 +364,13 @@
       </div>
       <ul>
         <li>
-          Delivered the Qannas operations dashboard full stack (NestJS, AdonisJS, Angular), improving day-to-day
-          operational workflows with a responsive UI and tight API integration.
+          Spearheaded the Qannas operations dashboard (NestJS, AdonisJS, Angular) to streamline daily workflows.
         </li>
         <li>
-          Architected NestJS APIs for Qannas Community (Twitter-like social platform), enabling real-time interactions
-          and higher engagement throughput.
+          Architected NestJS APIs for Qannas Community, enabling real-time social interactions at scale.
         </li>
         <li>
-          Improved system performance and reliability by ~30% through targeted optimization, refactoring, and
-          security/scalability best practices.
+          Accelerated system performance and reliability by ~30% through focused optimization and refactoring.
         </li>
       </ul>
     </div>
@@ -379,41 +386,28 @@
       </div>
       <ul>
         <li>
-          Refactored and scaled the Lohanza e-commerce platform (NestJS, PostgreSQL, Prisma), launching a production-ready
-          architecture in 2023 (https://lohanza.com).
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ========== PAGE 2 ========== -->
-  <div class="page-break"></div>
-
-  <div class="section">
-    <div class="job" style="margin-top: 0;">
-      <ul>
-        <li>
-          Launched 2 storefronts — professional Lohanza and SouqAlMoslimeen.com — expanding product coverage and
-          go-to-market reach (https://souqalmuslimeen.com).
+          Refactored Lohanza (NestJS, PostgreSQL, Prisma) into a scalable production architecture
+          (https://lohanza.com).
         </li>
         <li>
-          Deployed both platforms on AWS for high availability, improving release reliability and delivery speed for
-          production traffic.
+          Launched 2 storefronts, Lohanza Pro and SouqAlMoslimeen.com, expanding go-to-market reach
+          (https://souqalmuslimeen.com).
         </li>
         <li>
-          Integrated 2 payment gateways (Stripe + Paymob), enabling multi-provider checkout and higher payment
-          completion flexibility.
+          Orchestrated AWS deployments for both sites, improving release reliability under load.
         </li>
         <li>
-          Built Shopx platform APIs covering customer management, shipment lifecycle, and traveler services to
-          streamline multi-step operations in one backend.
+          Integrated Stripe and Paymob to enable multi-provider checkout.
+        </li>
+        <li>
+          Developed Shopx APIs for customers, shipments, and traveler services in one backend.
         </li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job-top">
-        <div class="job-title">backend developer</div>
+        <div class="job-title">Backend Developer</div>
         <div class="job-dates">07/2022 - 06/2023</div>
       </div>
       <div class="company">
@@ -422,8 +416,8 @@
       </div>
       <ul>
         <li>
-          Delivered 3 production NestJS systems: Licensing Essentials (traffic-violation inquiry/payment), a violations
-          review microservice, and a winch driving platform (https://www.amangroup-eg.com).
+          Delivered 3 NestJS systems: traffic-violation licensing/payments, violations review, and winch operations
+          (https://www.amangroup-eg.com).
         </li>
       </ul>
     </div>
@@ -439,18 +433,16 @@
       </div>
       <ul>
         <li>
-          Built and enhanced microservices for an e-payment platform processing thousands of transactions daily with
-          high availability and low latency.
+          Scaled e-payment microservices handling 1,000+ daily transactions with high availability and low latency.
         </li>
         <li>
-          Delivered new supporting services and app features that extended core e-payment capabilities without
-          disrupting live transaction throughput.
+          Extended core payment capabilities with new services without disrupting live throughput.
         </li>
       </ul>
     </div>
   </div>
 
-  <div class="section">
+  <div class="section education">
     <div class="section-title">Education</div>
     <div class="job">
       <div class="job-top">
@@ -465,47 +457,83 @@
     <div class="section-title">Skills</div>
     <div class="two-col">
       <div class="skill-row">
-        <span class="skill-name">Docker, GitHub Actions,<br />Nginx</span>
-        <span class="skill-level">Advanced</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-name">PostgreSQL,Mysql,MongoDb,<br />DynamoDB, InfluxDB</span>
-        <span class="skill-level">Intermediate</span>
-      </div>
-
-      <div class="skill-row">
-        <span class="skill-name">JavaScript/TypeScript,Nodejs</span>
+        <span class="skill-name">TypeScript</span>
         <span class="skill-level">Expert</span>
       </div>
       <div class="skill-row">
-        <span class="skill-name">TypeORM, Prisma, Drizzle</span>
+        <span class="skill-name">Node.js</span>
         <span class="skill-level">Expert</span>
       </div>
 
       <div class="skill-row">
-        <span class="skill-name">Express.js ,Adonis.js and<br />Nest.js</span>
+        <span class="skill-name">NestJS</span>
         <span class="skill-level">Advanced</span>
       </div>
       <div class="skill-row">
-        <span class="skill-name">AWS (EC2, S3, RDS,<br />CloudFront, Lambda)</span>
+        <span class="skill-name">Express.js</span>
         <span class="skill-level">Advanced</span>
       </div>
 
+      <div class="skill-row">
+        <span class="skill-name">AWS Lambda</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Terraform</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">DynamoDB</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">PostgreSQL</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">InfluxDB</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Drizzle</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">Prisma</span>
+        <span class="skill-level">Expert</span>
+      </div>
       <div class="skill-row">
         <span class="skill-name">Redis</span>
         <span class="skill-level">Advanced</span>
       </div>
+
       <div class="skill-row">
-        <span class="skill-name">Terraform, Serverless</span>
+        <span class="skill-name">Docker</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">GitHub Actions</span>
         <span class="skill-level">Advanced</span>
       </div>
 
       <div class="skill-row">
-        <span class="skill-name">Problem Solving</span>
-        <span class="skill-level">Expert</span>
+        <span class="skill-name">Angular</span>
+        <span class="skill-level">Advanced</span>
       </div>
       <div class="skill-row">
-        <span class="skill-name">Linux</span>
+        <span class="skill-name">MongoDB</span>
+        <span class="skill-level">Intermediate</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">Serverless</span>
+        <span class="skill-level">Advanced</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">CI/CD</span>
         <span class="skill-level">Advanced</span>
       </div>
     </div>
